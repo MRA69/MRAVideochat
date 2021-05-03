@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="script.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <style>
+    body {
+      background: #0098ff;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .close-icon
+    {
+  display:block;
+  box-sizing:border-box;
+  width:60px;
+  height:60px;
+  top: 705px;
+  left: 205px;
+  border-width:3px;
+  border-style: solid;
+  border-color:red;
+  border-radius:100%;
+  background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
+  background-color:red;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  box-shadow:0px 0px 5px 2px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  position: fixed;
+   }
+    #localVideo{
+      background: white;
+      background-image: url("1.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 104px;
+      height: 140px;
+      top: 10px;
+      right: 20px;
+      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+      border-radius: 30px;
+      position: fixed;
+    }
+    #remoteVideo{
+      display: flex;
+      background: white;
+      background-image: url("1.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      box-sizing: border-box;
+      border-radius: 30px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: fixed;
+    }
+</style>
+</head>
+<body>
+  <video id="remoteVideo" autoplay></video>
+  <video id="localVideo" autoplay muted></video> 
+  <a href="javascript:close_window();" class="close-icon"></a>
+<script>
+function close_window()
+{
+  if(confirm("DO YOU WANT TO QUIT THE CHAT?"))
+  {
+  window.location.replace("https://www.google.com/");
+  }
+};
+</script> 
+</body>
+</html>
